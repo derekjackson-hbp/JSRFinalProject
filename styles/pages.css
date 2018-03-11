@@ -1,17 +1,29 @@
 header {
-	background-color:#DDDDDD;
+	background-color:#DEDEDE;
 
 }
 
-#skip-link {
+#skiplink {
+	left:-999px;
+    position:absolute;
+    top:auto;
+    overflow:hidden;
+}
+
+#skiplink:focus, #skiplink:active {
+	left: auto;
 	border: 1px solid black;
 	width:200px;
 	text-align: center;
+	padding:3px 5px;
 	margin-left: 1em;
+	vertical-align:top;
+	display:inline-block;
 }
 
 .banner-container {
 	padding: 20px 10px;
+	display:inline-block;
 }
 
 h1{
