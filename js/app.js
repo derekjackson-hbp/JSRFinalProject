@@ -3,11 +3,18 @@ var tell = function(str){
 }
 
 var app = {
+	toPage: function(page){
+		document.title = 'Accessibility Overview: ' + page;
+		{debugger}
+		$('#content').html('<h1 id="main-h1">' + page + '</h1>')
+		$('#main-h1').focus();
+		$
+	},
 	menu: function(el) {
 		$(el)
 			.on('click','li',function(){ 
 				var text = $(this).text(); 
-				tell(text);
+				app.toPage(text);
 			})
 			.keypress(function(e){
 
@@ -18,43 +25,55 @@ var app = {
 				{debugger};
 				switch (key){
 					case 13:
-					case 27: {
-						tell(text);
+					case 32: {
+						event.preventDefault();
+						event.stopPropagation();
+						app.toPage(text);
 						break;
 					}
-					case 38:
-						alert('up');
-						break;
-					case 40:
-						alert ('down');
-						break;	
 				} 
 			})
 			.keydown(function(e){
+				var items = [];
+				$('li').each(function(){
+					var key = this.id;
+					items.push(key); 
+					{debugger};
+				});
 				var key = e.keyCode;
 				{debugger}
-				var text = $('*:focus').text();
-				var currEl = $('*:focus')
+				var currEl = $('*:focus');
+				var position = currEl.index();
+				var limit = items.length;
 				{debugger};
 				switch (key){
-					case 13:
-					case 27:
-						tell(text)
-						break
 					case 38:
-						event.prevetDefault();
-						alert('up');
+						event.preventDefault();
+						event.stopPropagation();
+						position = position - 1;
+						if (position >= 0){
+							var newElId = '#' + items[position];
+							$(newElId).focus();
+						}
 						break;
 					case 40:
-						alert ('down');
+						event.preventDefault();
+						event.stopPropagation();
+						position = position + 1;
+						if (position < limit){
+							var newElId = '#' + items[position];
+							$(newElId).focus();
+						}
 						break;	
 				} 
 			})
 	}
-}
+};
 
 
 app.menu('#main-menu-list');
+
+
 	
 
 

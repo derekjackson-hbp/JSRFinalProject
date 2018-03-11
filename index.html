@@ -8,6 +8,7 @@
       <link rel="stylesheet" href="styles/normalize.css" media="screen" charset="utf-8">
       <link rel="stylesheet" href="styles/pages.css" media="screen" charset="utf-8">
     </head>
+
     <body>
         <header role="banner" class="banner">
           <a href="#main-h1" id="skiplink">skip to main content</a>
@@ -15,16 +16,27 @@
         	<div class="banner-container">
             	<h1 id="banner-title">accessibility</h1>
         	</div>
+          <!-- Tst to see if app.menu() works on all lists ... not yet
+          <nav id="menu-test" role="navigation" title="alt menu">
+          <ul id="alt-list" role="menubar"> 
+            <li id="mml1x" data-page="chat" role="menuitem" tabindex="0">spot 1</li>
+            <li id="mml2x" data-page="menu" role="menuitem" tabindex="0">spot 2</li>
+            <li id="mml3x" data-page="menu" role="menuitem" tabindex="0">spot 3</li>
+             </ul>
+           -->
+
+        </nav>
         </header>
         <nav id="main-menu" role="navigation" title="main menu">
-        	<ul id="main-menu-list" role="menubar"> 
+        	<ul id="main-menu-list" role="menubar" title="examples menu"> 
         		<li id="mml1" data-page="chat" role="menuitem" tabindex="0">Chat Example</li>
-        		<li id="mml" data-page="menu" role="menuitem" tabindex="0">Drop Down Menu</li>
+        		<li id="mml2" data-page="menu" role="menuitem" tabindex="0">Drop Down Menu</li>
+            <li id="mml3" data-page="menu" role="menuitem" tabindex="0">Input selection menu</li>
              </ul>
 
         </nav>
-        <section role="main" class="main-body">
-          <div style="height: 700px;"></div>
+        <section role="main" class="main-body" id="content">
+          <div style="height: 300px;"></div>
         	<h1 id="main-h1">Information</h1>
         		<p>we will see what goes here</p>
         </section>
