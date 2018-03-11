@@ -5,8 +5,7 @@ var tell = function(str){
 var app = {
 	toPage: function(page){
 		document.title = 'Accessibility Overview: ' + page;
-		{debugger}
-		$('#content').html('<h1 id="main-h1">' + page + '</h1>')
+		$('#content').html('<h1 id="main-h1" tabindex="0">' + page + '</h1>')
 		$('#main-h1').focus();
 		$
 	},
