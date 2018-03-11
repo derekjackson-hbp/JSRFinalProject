@@ -4,25 +4,35 @@
       
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>Accessibility Overview<</title>
+      <title>Accessibility Overview</title>
       <link rel="stylesheet" href="styles/normalize.css" media="screen" charset="utf-8">
       <link rel="stylesheet" href="styles/pages.css" media="screen" charset="utf-8">
     </head>
     <body>
         <header role="banner" class="banner">
-            <h1>accessibility</h1>
+          <a href="#main-body">
+            <div id="skip-link">
+              <p>skip to main content</p>
+            </div>
+          <a>
+         
+        	<div class="banner-container">
+            	<h1 id="banner-title">accessibility</h1>
+        	</div>
         </header>
-        <nav id="main-menu">
-        	<ul id="main-menu-list"> 
-        		<li id="mml1" data-page="chat">Chat Example</li>
-        	</ul>
+        <nav id="main-menu" role="navigation" title="main menu">
+        	<ul id="main-menu-list" role="menubar"> 
+        		<li id="mml1" data-page="chat" role="menuitem" tabindex="0">Chat Example</li>
+        		<li id="mml" data-page="menu" role="menuitem" tabindex="0">Drop Down Menu</li>
+             </ul>
 
         </nav>
-        <section role="main">
-        	<h2>Topics</h2>
-        		<ul id="main-list">
-        			<li>Chat</li>
+        <section role="main" class="main-body">
+        	<h1 id="main-h1">Information</h1>
+        		<p>we will see what goes here</p>
         </section>
         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>

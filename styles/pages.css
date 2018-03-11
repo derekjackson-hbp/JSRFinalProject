@@ -1,3 +1,44 @@
-h1 {
+header {
 	background-color:#DDDDDD;
+
+}
+
+#skip-link {
+	border: 1px solid black;
+	width:200px;
+	text-align: center;
+	margin-left: 1em;
+}
+
+.banner-container {
+	padding: 20px 10px;
+}
+
+h1{
+	margin:0;
+}
+
+#main-h1 {
+	padding:.5em 1em;
+}
+
+nav#main-menu{
+	display: inline-block;
+	width: 200px;
+	background-color: #BBBBBB;
+	vertical-align: top;
+}
+.main-body{
+	display: inline-block;
+	background-color: #efefef;
+}
+
+#main-menu-list{
+	list-style: none;
+}
+
+#main-menu-list li {
+	border: 1px solid black;
+	padding: 1em .5em;
+	margin-right: 1em;
 }
