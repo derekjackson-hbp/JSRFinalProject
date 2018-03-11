@@ -41,8 +41,8 @@ var app = {
 				});
 				var key = e.keyCode;
 				{debugger}
-				var currEl = $('*:focus');
-				var position = currEl.index();
+				var currEl = $('*:focus').attr('id');
+				var position = items.indexOf(currEl);
 				var limit = items.length;
 				{debugger};
 				switch (key){
