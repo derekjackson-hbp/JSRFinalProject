@@ -54,13 +54,49 @@ nav#main-menu{
 }
 
 #main-menu-list li {
-	border: 1px solid black;
+	border-top: 1px solid black;
 	padding: 1em .5em;
 	margin-right: 1em;
+	text-decoration: underline;
+
+}
+
+#main-menu-list li:hover, #main-menu-list li:focus {
+	border: 3px solid #22EE00;
+	background-color: #EFEFEF;
+	
+}
+
+#main-menu-list li:last-child{
+	border-bottom: 1px solid black;
 }
 
 .list-title {
 	font-weight: bold;
 	font-size: 1em;
 	margin: 0px 0px 10px -5px;
+}
+
+section#content {
+	margin: 1em;
+	border: 2px solid black;
+	padding: 10px;
+}
+
+/*DOG APP CSS*/
+.hidden {
+  display: none;
+}
+
+.unhide {
+  display: inline-block;
+  margin-left:1em;
+}
+
+#breed-menu{
+	display:inline;
+}
+
+.hide{
+	visibility: none;
 }

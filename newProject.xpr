@@ -2,7 +2,16 @@
 <project version="18.1">
     <meta>
         <filters directoryPatterns="" filePatterns="newProject.xpr" positiveFilePatterns="" showHiddenFiles="false"/>
-        <options/>
+        <options>
+            <serialized version="18.1" xml:space="preserve">
+                <map>
+                    <entry>
+                        <String>enable.project.master.files.support</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                </map>
+            </serialized>
+        </options>
     </meta>
     <projectTree name="newProject.xpr">
         <folder path="."/>
