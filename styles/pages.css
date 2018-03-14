@@ -77,7 +77,7 @@ nav#main-menu{
 	margin: 0px 0px 10px -5px;
 }
 
-section#content {
+#content {
 	margin: 1em;
 	border: 2px solid black;
 	padding: 10px;
@@ -101,12 +101,15 @@ section#content {
 	visibility: none;
 }
 
+/* AUDIO DESCRIPTION PAGE */
+
 .overlay{
   height:390px;
   width: 640px;
   background-color:black;
   z-index: 2;
   position:absolute;
+  display:inline-block;
 }
 .active{
 border: solid 2px #AABBCC;
@@ -115,4 +118,9 @@ font-weight: bold;
 }
 .hide-vid{
 display:none;
+}
+
+div#vid1 {
+	margin-top:10px;
+	text-align: center;
 }
