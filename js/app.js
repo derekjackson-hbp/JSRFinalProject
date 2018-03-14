@@ -43,7 +43,11 @@ var app = {
 					case 32: {
 						event.preventDefault();
 						event.stopPropagation();
-						app.toPage('/adopt_dogs/index.html');
+						var page = $(this).attr('data-page');
+						page = '/' + page + '/index.html' 
+						var title = $(this).attr('data-title')
+						app.toPage(page,title);
+						//app.toPage('/adopt_dogs/index.html');
 						break;
 					}
 				} 
