@@ -7,7 +7,7 @@
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    function onYouTubeIframeAPIReady() {
+    var onYouTubeIframeAPIReady = function() {
       {debugger}
         player = new YT.Player('player', {
           height: '390',
@@ -30,12 +30,12 @@
       }
 
           // 4. The API will call this function when the video player is ready.
-    function onPlayerReady(event) {
+    var onPlayerReady = function(event) {
       event.target.pauseVideo();
       event.target.unMute();
 
     }
-    function onPlayerReady2(event) {
+    var onPlayerReady2 = function(event) {
       event.target.pauseVideo();
       event.target.mute();
 
@@ -45,12 +45,19 @@
           //    The function indicates that when playing a video (state=1),
           //    the player should play for six seconds and then stop.
     var done = false;
-    function onPlayerStateChange(event) {
+    var  onPlayerStateChange = function(event){
       if (event.data == YT.PlayerState.PLAYING && !done) {
         setTimeout(stopVideo, 60000);
         done = true;
         replay();
       }
+    }
+
+    function init (){
+      onYouTubeIframeAPIReady();
+      onPlayerReady();
+      onPlayerReady2();
+      onPlayerStateChange();    
     }
 
     function stopVideo() {
@@ -104,11 +111,11 @@
         this.setAttribute('class','inactive')
       }
     }
-
-
     document.getElementById('mute').setAttribute('class','');
-    document.getElementById('play').setAttribute('class','');
-    document.getElementById('reload').setAttribute('class','');
-    document.getElementById('mute').addEventListener('click',change);
-    document.getElementById('play').addEventListener('click',change);
-    document.getElementById('reload').addEventListener('click',seekTo);
+      document.getElementById('play').setAttribute('class','');
+      document.getElementById('reload').setAttribute('class','');
+      document.getElementById('mute').addEventListener('click',change);
+      document.getElementById('play').addEventListener('click',change);
+      document.getElementById('reload').addEventListener('click',seekTo);
+    window.onload = init();
+    
