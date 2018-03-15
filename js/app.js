@@ -7,15 +7,15 @@ var app = {
 
 	toPage: function(page,title){
 		document.title = 'Accessibility Overview: ' + title;
-		$.ajax({
-			url: page,
-			method: 'GET',
-			success:function(result){
-				$('#content').html(result)
-			},
-			complete: function(){
-				$('#main-h1').focus();
-			}
+			$.ajax({
+				url: page,
+				method: 'GET',
+				success:function(result){
+					$('#content').html(result)
+				},
+				complete: function(){
+					$('#main-h1').focus();
+				}
 
 });
 			
@@ -43,9 +43,9 @@ var app = {
 					case 32: {
 						event.preventDefault();
 						event.stopPropagation();
-						var page = $(this).attr('data-page');
+						var page = $(e.target).attr('data-page');
 						page = '/' + page + '/index.html' 
-						var title = $(this).attr('data-title')
+						var title = $(e.target).attr('data-title')
 						app.toPage(page,title);
 						//app.toPage('/adopt_dogs/index.html');
 						break;
