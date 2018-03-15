@@ -7,6 +7,8 @@ var app = {
 
 	toPage: function(page,title){
 		document.title = 'Accessibility Overview: ' + title;
+		{debugger}
+		$('#ext').text(': ' + title);
 			$.ajax({
 				url: page,
 				method: 'GET',
