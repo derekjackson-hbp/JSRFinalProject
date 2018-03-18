@@ -111,6 +111,7 @@ nav#main-menu{
 }
 
 p.normal {
+	text-align: justify;
 }
 
 p.recommend, label.recommend, form.recommend {
@@ -168,7 +169,7 @@ p.dys-font, h2.dys-font, h3.dys-font, label.dys-font, div.dys-font, form.dys-fon
 }
 .active{
 border: solid 2px #AABBCC;
-background-color: #FFDDFF;
+background-color: #66FF00;
 font-weight: bold;
 }
 .hide-vid{

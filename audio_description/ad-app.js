@@ -106,7 +106,7 @@ function change(){
   }
 };
  var setPage = function() {
-document.getElementById('banner-title').focus(); 
+document.getElementById('skiplink').focus(); 
 document.getElementById('read').className='button on';
 document.getElementById('dys').className='button off';
  };
