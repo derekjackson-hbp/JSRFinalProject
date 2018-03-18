@@ -1,3 +1,20 @@
+@font-face {
+    font-family: dys;
+    src: url(odfont/OpenDyslexic-Bold.otf);
+}
+@font-face {
+    font-family: dys;
+    src: url(odfont/OpenDyslexic-BoldItalic.otf);
+}
+@font-face {
+    font-family: dys;
+    src: url(odfont/OpenDyslexic-Italic.otf);
+}
+@font-face {
+    font-family: dys;
+    src: url(odfont/OpenDyslexic-Regular.otf);
+}
+
 header {
 	background-color:#DEDEDE;
 
@@ -22,7 +39,7 @@ header {
 }
 
 .banner-container {
-	padding: 20px 10px;
+	padding: 20px 10px 10px 10px;
 	display:inline-block;
 }
 
@@ -32,6 +49,14 @@ h1{
 
 #main-h1 {
 	padding:.5em 1em;
+}
+
+header #controls{
+	 padding: .5em;
+    text-align: right;
+    margin-right: 10%;
+    margin-left: auto;
+    background-color: #222222;
 }
 
 nav#main-menu{
@@ -58,6 +83,7 @@ nav#main-menu{
 	padding: 1em .5em;
 	margin-right: 1em;
 	text-decoration: underline;
+	line-height: 1.4;
 
 }
 
@@ -81,6 +107,35 @@ nav#main-menu{
 	margin: 1em;
 	border: 2px solid black;
 	padding: 10px;
+	max-width:45em;
+}
+
+p.normal {
+}
+
+p.recommend, label.recommend, form.recommend {
+	line-height: 1.5;
+	font-size: 1.1em;
+	text-indent: 1.5em;
+	font-family: "Arial","Century Gothic",sans-serif;
+}
+
+p.dys-font, h2.dys-font, h3.dys-font, label.dys-font, div.dys-font, form.dys-font {
+	font-family:dys,"comic sans",sans-serif;
+}
+
+.button {
+	font-weight: bold;
+    border: solid black 1px;
+    margin: 1px;
+}
+
+.on {
+	background-color: #66FF00;
+}
+
+.off {
+	background-color: #eeaaa1;
 }
 
 /*DOG APP CSS*/

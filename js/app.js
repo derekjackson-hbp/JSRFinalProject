@@ -1,10 +1,4 @@
-var tell = function(str){
-	alert(str)
-}
-
-
 var app = {
-
 	toPage: function(page,title){
 		document.title = 'Accessibility Overview: ' + title;
 		{debugger}
@@ -14,14 +8,15 @@ var app = {
 				method: 'GET',
 				success:function(result){
 					$('#content').html(result)
+					$("#read"),attr('class','button on')
+					$("#dys"),attr('class','button off')
+
 				},
 				complete: function(){
-					$('#main-h1').focus();
-				}
-
-});
-			
-		
+					$('#banner-title').focus();
+					
+					}
+				});
 	},
 	menu: function(el) {
 		$(el)
@@ -87,10 +82,52 @@ var app = {
 				} 
 			}
 		});
+	},
+	buttonTog: function(el,state1,state2){
+		var classes = el.classList;
+		var index = 0;
+		for (var i = 0; i < classes.length; i++){
+			switch(classes[i]){
+				case state1:
+					index = i;
+					break;
+				case state2:
+					index = i;
+					break;
+			}
+		}
+		var origin = el.classList[index];
+		var setting = (el.classList[index] == state1) ? state2 : state1;
+		el.classList.replace(origin,setting);
+		{debugger}
+	},
+	read: function(el){
+		app.buttonTog(el,"on","off");
+		var status = (el.classList[1] == "on") ? ".normal" : ".recommend";
+		$(status).toArray().forEach(
+			function(currentValue){
+				{debugger}
+				app.buttonTog(currentValue,"recommend","normal");
+				
+			});
+		},
+	dys: function(el){
+		app.buttonTog(el,"on","off");
+		var status = (el.classList[1] == "on") ? ".nodys" : ".dys-font";
+		$(status).toArray().forEach(
+			function(currentValue){
+				{debugger}
+				app.buttonTog(currentValue,"nodys","dys-font");
+				
+			});
 	}
 }
 
 app.menu('#main-menu-list');
+$('button').on('click', function(){
+	var func = $(this).attr('data-func');
+	app[func](this);
+});
 
 
 	

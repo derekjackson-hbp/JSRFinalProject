@@ -14,8 +14,9 @@
           <a href="#main-h1" id="skiplink">skip to main content</a>
          
         	<div class="banner-container">
-            	<h1 id="banner-title">accessibility<span id="ext"></span></h1>
+            	<h1 id="banner-title" tabindex="-1">accessibility<span id="ext"></span></h1>
         	</div>
+
           <!-- Tst to see if app.menu() works on all lists ... not yet
           <nav id="menu-test" role="navigation" title="alt menu">
           <ul id="alt-list" role="menubar"> 
@@ -25,13 +26,15 @@
              </ul>
            -->
 
-        </nav>
+        <div id="controls" role="group" label="display settings">
+              <button id="read" data-func="read" class="button on" aria-label="Readability: toggles the display settings">Readability</button><button id="dys" data-func="dys" class="button off" aria-label="OpenDyslexic: toggles the font family">OpenDyslexic</button>
+            </div>
         </header>
         <nav id="main-menu" role="navigation" title="main menu">
 
         	<ul id="main-menu-list" role="menubar" title="examples menu"> 
             <span class="list-title">Samples Menu</span>
-        		<li id="mml1" data-page="adopt_dogs" data-title="Input Selection" role="menuitem" tabindex="0">Input Selection: Dog Rescue</li>
+        		<li id="mml1" data-page="adopt_dogs" data-title="Drop Down Menu" role="menuitem" tabindex="0">Drop Down Menu: Dog Rescue</li>
         		<li id="mml2" data-page="audio_description" data-title="Audio Description" role="menuitem" tabindex="0">Audio Description: Hunger Games</li>
             <li id="mml3" data-page="test" data-title="test" role="menuitem" tabindex="0">Input selection menu</li>
              </ul>
@@ -39,9 +42,14 @@
         </nav>
         <div id="content" class="main-body">
         <section role="main" id="section1">
-          <div></div>
-        	<h1 id="main-h1">Information</h1>
-        		<p>we will see what goes here</p>
+        	<h2 id="main-h1" class="nodys">Information about this page.</h2>
+        		<p class="recommend nodys">This web page demonstrates accessible elements of the web. For example, on this page the "Sample Menu" is enitrely navigable with the keyboard, as are all of the pages in this demonstration.</p>
+             <p class="recommend nodys">On this page there are two buttons in the banner, a "Readability" button and an "OpenDyslexic" button. The "Readability" button toggles the display of the "main" section. It loads selected to display settings chosen to improve readability for people with dyslexia and other cognitive disabilities. Deslect this button to compare it to regualr browser settings. You might readbility for all users improves with the optimized settings.</p>
+              <p class="recommend nodys">The "OpenDyslexic" button displays the OpenDyslexic font when it is selected. This is a font designed for dyslexic users and may give some idea of the difficulties these users have when encountering pages that have not been designed with accessibility in mind.</p> 
+            <p class="recommend nodys">The "Sample Menu" will load samples of accessible web content into this "main" region of the web page. Note that when the page content is updated, the title of the page also changes to reflect the change of context. Also you will notice the blue border on the banner's heading indicating that focus has moved to the beginning of the page.<p>
+             
+              
+
         </section>
         </div>
         
