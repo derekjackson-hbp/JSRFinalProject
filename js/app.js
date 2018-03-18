@@ -7,13 +7,13 @@ var app = {
 				url: page,
 				method: 'GET',
 				success:function(result){
-					$('#content').html(result)
-					$("#read"),attr('class','button on')
-					$("#dys"),attr('class','button off')
+					$('#content').html(result);
+					$("#read").attr('class','button on');
+					$("#dys").attr('class','button off');
 
 				},
 				complete: function(){
-					$('#banner-title').focus();
+					$('#skiplink').focus();
 					
 					}
 				});

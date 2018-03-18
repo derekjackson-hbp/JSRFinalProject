@@ -28,7 +28,7 @@ var onPlayerReady = function(event) {
   event.target.pauseVideo();
   event.target.unMute();
   // move the callback to when video is ready
-  focus();
+  setPage();
 };
 var onPlayerReady2 = function(event) {
   event.target.pauseVideo();
@@ -105,8 +105,10 @@ function change(){
     this.setAttribute('class','inactive')
   }
 };
- var focus = function() {
+ var setPage = function() {
 document.getElementById('banner-title').focus(); 
+document.getElementById('read').className='button on';
+document.getElementById('dys').className='button off';
  };
 
 
