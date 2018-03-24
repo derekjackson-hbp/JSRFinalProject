@@ -1,7 +1,7 @@
 var app = {
 	toPage: function(page,title){
 		document.title = 'Accessibility Overview: ' + title;
-		{debugger}
+		
 		$('#ext').text(': ' + title);
 			$.ajax({
 				url: page,
@@ -31,10 +31,10 @@ var app = {
 			.keypress(function(e){
 
 				var key = e.keyCode;
-				{debugger}
+				
 				var text = $('*:focus').text();
 				var currEl = $('*:focus')
-				{debugger};
+				
 				switch (key){
 					case 13:
 					case 32: {
@@ -99,14 +99,15 @@ var app = {
 		var origin = el.classList[index];
 		var setting = (el.classList[index] == state1) ? state2 : state1;
 		el.classList.replace(origin,setting);
-		{debugger}
+		
+
 	},
 	read: function(el){
 		app.buttonTog(el,"on","off");
 		var status = (el.classList[1] == "on") ? ".normal" : ".recommend";
 		$(status).toArray().forEach(
 			function(currentValue){
-				{debugger}
+				
 				app.buttonTog(currentValue,"recommend","normal");
 				
 			});
@@ -116,7 +117,7 @@ var app = {
 		var status = (el.classList[1] == "on") ? ".nodys" : ".dys-font";
 		$(status).toArray().forEach(
 			function(currentValue){
-				{debugger}
+				
 				app.buttonTog(currentValue,"nodys","dys-font");
 				
 			});
