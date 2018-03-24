@@ -107,6 +107,7 @@ function change(){
 };
  var setPage = function() {
 document.getElementById('skiplink').focus(); 
+document.getElementById('ol').className='overlay'; 
 document.getElementById('read').className='button on';
 document.getElementById('dys').className='button off';
  };

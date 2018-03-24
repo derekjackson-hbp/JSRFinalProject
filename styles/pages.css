@@ -32,7 +32,7 @@ header {
 	border: 1px solid black;
 	width:200px;
 	text-align: center;
-	padding:3px 5px;
+	padding:.2em .4em;
 	margin-left: 1em;
 	vertical-align:top;
 	display:inline-block;
