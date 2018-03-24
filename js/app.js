@@ -22,7 +22,7 @@ var app = {
 		$(el)
 			.on('click','li',function(){ 
 				var page = $(this).attr('data-page');
-				page = 'JSRFinalProject/' + page + '/index.html' 
+				page = '/' + page + '/index.html' 
 				var title = $(this).attr('data-title')
 
 				app.toPage(page,title);
